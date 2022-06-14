@@ -23,7 +23,7 @@ with st.sidebar:
                           ['Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
-                          icons=['bullseye','bag-heart-fill','file-earmark-person'],
+                          icons=['bullseye','heart','file-earmark-person'],
                           default_index=0)
     
     
