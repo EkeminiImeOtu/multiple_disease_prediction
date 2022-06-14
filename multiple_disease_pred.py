@@ -18,12 +18,12 @@ parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 # sidebar for navigation
 with st.sidebar:
     
-    selected = option_menu('Multiple Disease Prediction System',
+    selected = option_menu('Diseases Prediction Model',
                           
                           ['Diabetes Prediction',
                            'Heart Disease Prediction',
                            'Parkinsons Prediction'],
-                          icons=['activity','heart','person'],
+                          icons=['bullseye','bag-heart-fill','file-earmark-person'],
                           default_index=0)
     
     
@@ -35,7 +35,7 @@ if (selected == 'Diabetes Prediction'):
     
     
     # getting the input data from the user
-    col1, col2, col3 = st.columns(3)
+    col1, col2, col3,col4 = st.columns(4)
     
     with col1:
         Pregnancies = st.text_input('Number of Pregnancies')
@@ -46,19 +46,19 @@ if (selected == 'Diabetes Prediction'):
     with col3:
         BloodPressure = st.text_input('Blood Pressure value')
     
-    with col1:
+    with col4:
         SkinThickness = st.text_input('Skin Thickness value')
     
-    with col2:
+    with col1:
         Insulin = st.text_input('Insulin Level')
     
-    with col3:
+    with col2:
         BMI = st.text_input('BMI value')
     
-    with col1:
+    with col3:
         DiabetesPedigreeFunction = st.text_input('Diabetes Pedigree Function value')
     
-    with col2:
+    with col4:
         Age = st.text_input('Age of the Person')
     
     
